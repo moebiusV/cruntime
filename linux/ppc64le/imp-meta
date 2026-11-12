@@ -1,7 +1,0 @@
-triple powerpc64le-linux-gnu
-date 2026-11-12T17:52:48Z
-from libc6_2.41-12+deb13u4_ppc64el.deb
-from libc6-dev_2.41-12+deb13u4_ppc64el.deb
-from libgcc-s1_14.2.0-19_ppc64el.deb
-from linux-libc-dev_6.12.107-1_all.deb
-from libgcc-14-dev_14.2.0-19_ppc64el.deb

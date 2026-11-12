@@ -1,0 +1,10 @@
+triple powerpc64le-linux-gnu
+os linux/debian13
+arch ppc64le
+recipe debian:ppc64el:debian13
+date 2026-11-12T18:16:31Z
+from libc6_2.41-12+deb13u4_ppc64el.deb sha256 917cbd81a9038133bd58bbfe0991db889a78eb446be2080015b7804942b45ec2
+from libc6-dev_2.41-12+deb13u4_ppc64el.deb sha256 ec599cd9f829b6afa219acf9bcd05878de41e49943cd24c8580ae9d3cabefcb0
+from libgcc-s1_14.2.0-19_ppc64el.deb sha256 9fef01c88bc508ff05ff9ce5d0cc05de36798591e060b07749c3835616ed5696
+from linux-libc-dev_6.12.107-1_all.deb sha256 dc68dd53c7356598d005866da0d19d7bd33af2a62971aced624cdf04492902b4
+from libgcc-14-dev_14.2.0-19_ppc64el.deb sha256 8e47abc40fe731fa380d3226fbdfda100274035d7295cf94fd86ea729e4edaea

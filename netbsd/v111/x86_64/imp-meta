@@ -1,4 +1,7 @@
 triple x86_64-unknown-netbsd
-date 2026-11-12T17:53:54Z
+os netbsd
+arch x86_64
+recipe netbsd:amd64
+date 2026-11-12T18:14:35Z
 from NetBSD-11.1-amd64 base.tar.xz 01d1ae3b28eb275f8788f9935ab5ec361ff23a95e7367ec4e2d134af37be7dde6ab9d67ed1e64c690c71dcbfe8bb770bbaaf7af57852475cb60de6ddf55220dd
 from NetBSD-11.1-amd64 comp.tar.xz 965216c4ef854bba10b299de78287225b60454ab1ba762af81c9e8d26d39ad28bdc26057bd656502c21dc3cda2223da94107cea1d541fe8cbfa35ada2073dcc4

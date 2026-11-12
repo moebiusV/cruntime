@@ -1,3 +1,6 @@
 triple x86_64-unknown-openbsd
-date 2026-11-12T17:53:35Z
+os openbsd
+arch x86_64
+recipe openbsd:amd64
+date 2026-11-12T18:14:16Z
 from OpenBSD-8.0-amd64 base80.tgz ec4957f6fd81756412265a6d2f394268d61927c953ef0677a8a2b7dc1cd6afd2

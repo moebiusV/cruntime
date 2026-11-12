@@ -1,0 +1,9 @@
+triple x86_64-linux-musl
+os linux/alpine322
+arch x86_64
+recipe alpine:x86_64:alpine322
+date 2026-11-12T18:13:10Z
+from musl-1.2.5-r13.apk v3.22/x86_64 359890bc7c4dc5fee7a85192de60a471c987e4664767288578beca60a44db2c8
+from musl-dev-1.2.5-r13.apk v3.22/x86_64 2ca496dd68c0b340b50cf9940bc2f3312eac8b56ec2d3284a621be6f0c09ffb1
+from linux-headers-6.14.2-r0.apk v3.22/x86_64 b0d7184f0e8d926961b82dff3d8a6a1f85db100dfc97e3fa1e6a25bbe9fd0f71
+from gcc-14.2.0-r6.apk v3.22/x86_64 4fd10bd05784f596e5ff0adc724a94b71380fac0ac276bd257dd861e8b5822e6

@@ -1,0 +1,7 @@
+triple i686-linux-gnu
+date 2026-11-12T17:52:21Z
+from libc6_2.41-12+deb13u4_i386.deb
+from libc6-dev_2.41-12+deb13u4_i386.deb
+from libgcc-s1_14.2.0-19_i386.deb
+from linux-libc-dev_6.12.107-1_all.deb
+from libgcc-14-dev_14.2.0-19_i386.deb

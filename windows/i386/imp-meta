@@ -1,0 +1,5 @@
+triple i686-w64-mingw32
+date 2026-11-12T17:53:02Z
+from mingw-w64-i686-dev_12.0.0-5_all.deb
+from mingw-w64-common_12.0.0-5_all.deb
+from gcc-mingw-w64-i686-win32_14.2.0-19+27+b1_amd64.deb

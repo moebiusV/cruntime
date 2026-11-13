@@ -1,0 +1,6 @@
+triple aarch64-unknown-freebsd
+os freebsd
+arch aarch64
+recipe freebsd:arm64
+date 2026-11-12T18:14:04Z
+from FreeBSD-15.1-RELEASE-arm64 base.txz 5b7a46a0abfbe23a1d4454b5600e2efcfce16b705bc7e9c851c37470c035ef98

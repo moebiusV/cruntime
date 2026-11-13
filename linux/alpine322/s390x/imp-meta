@@ -1,0 +1,9 @@
+triple s390x-linux-musl
+os linux/alpine322
+arch s390x
+recipe alpine:s390x:alpine322
+date 2026-11-12T18:13:25Z
+from musl-1.2.5-r13.apk v3.22/s390x a7bd3c2aacd4e75d642eb5e40f65ca7925efaac98134fa52f4c9b070cdf6c366
+from musl-dev-1.2.5-r13.apk v3.22/s390x 77f0be10f2879ed7222b55cfb31f2d7f0fd8604b225a91e80e93824fce709be9
+from linux-headers-6.14.2-r0.apk v3.22/s390x 74bc11b78519137b3786c3aad7c595063641f60cd5cba524d2087250635d1449
+from gcc-14.2.0-r6.apk v3.22/s390x 2b56e90c3f0c14d7482bc43a4cb396bf6f1ec72a802cb1e90d764d8a56f0317b

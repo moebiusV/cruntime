@@ -1,0 +1,6 @@
+triple aarch64-unknown-openbsd
+os openbsd
+arch aarch64
+recipe openbsd:arm64
+date 2026-11-12T18:14:26Z
+from OpenBSD-8.0-arm64 base80.tgz 92cfeda3da21d14f10f0687d194a3a6ec99fbf89140f927369e37f917ca35ed9

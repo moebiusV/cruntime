@@ -12,7 +12,7 @@ machine for each system.
 
 The files are on the `sysroots` branch (this branch, `main`, is this README, the license texts and the site, a few kilobytes: the files are over a gigabyte).  On that branch:
 
-    OS/ARCH               windows/x86_64
+    OS/ARCH               windows/x86_64   windows-ucrt/x86_64
     OS/RELEASE/ARCH       linux/debian13/aarch64   linux/alpine322/x86_64   openbsd/v80/x86_64   freebsd/v151/x86_64
 
 A system with releases has the release in the path (linux/debian13 is glibc on Debian 13, linux/alpine322 is musl
@@ -29,6 +29,7 @@ on Alpine 3.22, v151 is FreeBSD 15.1, v80 OpenBSD 8.0).  Each directory is compl
 | linux/debian13 | x86_64 aarch64 armv7 arm i386 riscv64 s390x ppc64le | glibc | Debian 13 packages |
 | linux/alpine322 | x86_64 aarch64 armv7 i386 riscv64 s390x ppc64le loongarch64 | musl | Alpine 3.22 packages |
 | windows | x86_64 i386 | msvcrt | mingw-w64 (Debian packages) |
+| windows-ucrt | x86_64 | UCRT (ucrtbase, part of Windows 10 and later) | mingw-w64 (MSYS2's ucrt64 packages) |
 | freebsd | x86_64 aarch64 (15.1), i386 (14.5) | FreeBSD libc | base.txz of the release |
 | openbsd | x86_64 aarch64 (8.0) | OpenBSD libc | base set of the release |
 | netbsd | x86_64 (11.1) | NetBSD libc | base and comp sets of the release |
@@ -55,11 +56,12 @@ about 1.5 GB), then give it to the compiler as the sysroot:
 
 A Linux directory also holds libgcc under `usr/lib/gcc/<triple>/<version>`, which clang finds from the sysroot or
 names with `--gcc-install-dir`; a Windows one has the mingw-w64 tree under `usr/<triple>` with crt2.o and
-libmingw32.a.  With IMP72 the driver does all of this: `imp --target=aarch64-linux-gnu prog.imp` fetches the
-directory from the `sysroots` branch and links.
+libmingw32.a; `windows-ucrt` has MSYS2's layout, `lib/` (crt2.o, libmingw32.a, libucrt.a and the import libraries) and
+`include/`, and its programs link `-lucrt` where the others link `-lmsvcrt`.  With IMP72 the driver does all of this: `imp --target=aarch64-linux-gnu prog.imp` fetches the
+directory from the `sysroots` branch and links (`--target=x86_64-w64-mingw32-ucrt` for the UCRT).
 
 What has been tried: programs of the IMP72 compiler linked with lld against the aarch64 Linux (glibc), x86_64 musl,
-x86_64 mingw-w64, and x86_64 FreeBSD, OpenBSD and NetBSD directories; the aarch64 and mingw-w64 programs were run
+x86_64 mingw-w64 (msvcrt, and the UCRT: all 38 programs of its test suite print their goldens under Wine), and x86_64 FreeBSD, OpenBSD and NetBSD directories; the aarch64 and mingw-w64 programs were run
 (under qemu's user mode and Wine) and the musl one with Alpine's own loader.  The BSD programs were linked, not
 run, and the clang command lines above are the ordinary ones, not tried here.
 
@@ -479,5 +481,22 @@ Made by imp-sysroot on 2026-11-12 with the recipe `mingw:x86-64`; nothing in it 
 #### License and source
 
 mingw-w64 is public domain, ZPL-2.1 and BSD-style by file (usr/share/doc/mingw-w64-*/copyright); libgcc and the start files: GPL-3.0-or-later WITH GCC-exception-3.1.  Corresponding source: the Debian source packages mingw-w64 and gcc-mingw-w64 (https://sources.debian.org/).
+
+### windows-ucrt/x86_64 (x86_64-w64-mingw32-ucrt)
+
+Made by imp-sysroot on 2026-11-13 with the recipe `msys2:ucrt64`; nothing in it was written by hand.
+
+**Source: MSYS2 packages** (https://repo.msys2.org/mingw/ucrt64), the UCRT build of mingw-w64: mingw-w64-ucrt-x86_64-headers, -crt (the start file crt2.o, libmingw32.a, libmingwex.a, libmoldname.a, the import libraries including libucrt.a and those of the Windows DLLs) and -winpthreads, taken whole, and from -gcc only libgcc.a and libgcc_eh.a (copied beside the start files).  Each package is checked against the SHA-256 of the repository database, which also says its license: the SPDX expression is with each package below.  The programs link to the **UCRT** (ucrtbase.dll, a part of Windows 10 and later), not msvcrt.
+
+#### What was fetched
+
+- mingw-w64-ucrt-x86_64-headers-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 b3cec87298555a7c6694bd4d421d586d08a1cb47bc5bc76e79602cbf4421d3c9 license spdx:ZPL-2.1 AND LGPL-2.1-or-later 
+- mingw-w64-ucrt-x86_64-crt-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 e863d0d1c5cef1269738f23dcc155b9b0d161d198b93d9d5aa481cb3a2f2cf53 license spdx:ZPL-2.1 
+- mingw-w64-ucrt-x86_64-winpthreads-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 282485a1e453e972b86639cedcf43686e0000dfe5eff0421e47a4405ecdd85ce license spdx:MIT AND BSD-3-Clause 
+- mingw-w64-ucrt-x86_64-gcc-16.2.0-6-any.pkg.tar.zst sha256 0290e91f5a9a8a3699bcea6221a899403bb9bd5d6f7dbd98c883d74e2ef36338 license spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND GFDL-1.3-or-later 
+
+#### License and source
+
+mingw-w64: ZPL-2.1 (the crt), ZPL-2.1 and LGPL-2.1-or-later (the headers), MIT and BSD-3-Clause (winpthreads), and GPL-3.0-or-later WITH GCC-exception-3.1 (libgcc and its start files), as each package says; the texts of the licenses the packages carry are under share/licenses.  Corresponding source: the PKGBUILDs and sources of https://github.com/msys2/MINGW-packages.
 
 <!-- provenance:end -->

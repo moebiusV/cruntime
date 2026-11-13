@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/loongarch/asm/perf_regs.h

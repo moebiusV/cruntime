@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/powerpc/asm/unistd_32.h

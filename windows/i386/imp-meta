@@ -1,8 +1,0 @@
-triple i686-w64-mingw32
-os windows
-arch i386
-recipe mingw:i686
-date 2026-11-12T18:16:39Z
-from mingw-w64-i686-dev_12.0.0-5_all.deb sha256 ddd5f65c29014ae67b89df146a8016f38056a9d8eadbccd17cae4c00ccd01528
-from mingw-w64-common_12.0.0-5_all.deb sha256 97dce5d0d8aff1cade4786ad4ef5078345477a598829afcac2e7f2fbc5399990
-from gcc-mingw-w64-i686-win32_14.2.0-19+27+b1_amd64.deb sha256 918cc18b87ccaa197a2abf53d00382cb48779a99ea5c9c10413099d92a4dfa1f

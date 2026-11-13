@@ -1,9 +1,0 @@
-triple armv7-linux-musleabihf
-os linux/alpine322
-arch armv7
-recipe alpine:armv7:alpine322
-date 2026-11-12T18:13:16Z
-from musl-1.2.5-r13.apk v3.22/armv7 f6f874092f120ea418d72abf554ac114c4aa34618ae5be84dc7cb3e48e614422
-from musl-dev-1.2.5-r13.apk v3.22/armv7 64cb621ca0ccf1cff50689a4bdde97a28204433c0c3ae70d590a71b99cb61e60
-from linux-headers-6.14.2-r0.apk v3.22/armv7 4bc6864f71361fb15a1ca2d96d217343c0e84f2e5dce6518ed84b3f694c0e9df
-from gcc-14.2.0-r6.apk v3.22/armv7 318b9f4425a86462defc92258c48a791f2bc95a8ab93ea569e3c246b6cde857f

@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/mips/asm/cachectl.h

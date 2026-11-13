@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/powerpc/asm/posix_types.h

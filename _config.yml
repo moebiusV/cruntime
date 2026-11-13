@@ -1,10 +1,4 @@
 title: cruntime
 description: Headers, start files and C libraries of Linux, Windows and the BSDs, laid out as sysroots, for cross compiling with LLVM
-# The sysroots are not part of the site: they are over a gigabyte (Pages has a limit of one) and hold symbolic links
-# that point nowhere, which Jekyll stops at.  The site is this README and the license texts.
-exclude:
-  - linux
-  - windows
-  - freebsd
-  - openbsd
-  - netbsd
+# The site is this branch: the README and the license texts.  The sysroots are on the sysroots branch, which Pages does not build
+# (they are over a gigabyte, Pages has a limit of one, and they hold symbolic links that point nowhere, which Jekyll stops at).

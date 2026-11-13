@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/powerpc/asm/perf_event.h

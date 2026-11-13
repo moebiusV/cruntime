@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/powerpc/asm/spu_info.h

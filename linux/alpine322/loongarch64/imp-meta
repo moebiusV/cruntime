@@ -1,9 +1,0 @@
-triple loongarch64-linux-musl
-os linux/alpine322
-arch loongarch64
-recipe alpine:loongarch64:alpine322
-date 2026-11-12T18:13:31Z
-from musl-1.2.5-r13.apk v3.22/loongarch64 5b6975f96039d4fc912b58b04134cec77dfe913ae819bc78a4bd39ed86b2ed7e
-from musl-dev-1.2.5-r13.apk v3.22/loongarch64 117bdcaba09493440fa358addf448cc0ba3f11235ef417c6f3c5f993860f17f9
-from linux-headers-6.14.2-r0.apk v3.22/loongarch64 dbd3b14117e240d25924c9ce6310503e02d98f15208f1d006447d7ec0c5959f7
-from gcc-14.2.0-r6.apk v3.22/loongarch64 0a134b8677a979e755d6d80b643ca97db9f9e43339733ced0080098f001aca62

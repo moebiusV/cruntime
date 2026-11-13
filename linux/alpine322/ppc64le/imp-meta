@@ -1,9 +1,0 @@
-triple powerpc64le-linux-musl
-os linux/alpine322
-arch ppc64le
-recipe alpine:ppc64le:alpine322
-date 2026-11-12T18:13:28Z
-from musl-1.2.5-r13.apk v3.22/ppc64le cbc140f849bee3036efc89735c4d312ae0f23f1abe6c42d7f23d557c85ed3e01
-from musl-dev-1.2.5-r13.apk v3.22/ppc64le 209e502448b142ea67fc2f419ea65f38e7719c2922ffc8fe587ffe9c3ccf23d6
-from linux-headers-6.14.2-r0.apk v3.22/ppc64le b4cd6ca879655ee8fed4e95587a37e4610998d5861ff46c5fb818ef2eb826535
-from gcc-14.2.0-r6.apk v3.22/ppc64le b1221557cc44ba5393972183c5ba73549148055ac1f6d9623e64fe363cf3b175

@@ -1,6 +1,0 @@
-triple x86_64-unknown-freebsd
-os freebsd
-arch x86_64
-recipe freebsd:amd64
-date 2026-11-12T18:13:50Z
-from FreeBSD-15.1-RELEASE-amd64 base.txz 3768988b151c20f965679062b065c63a977d6bbb9f47fd83695ec2c40790c18f

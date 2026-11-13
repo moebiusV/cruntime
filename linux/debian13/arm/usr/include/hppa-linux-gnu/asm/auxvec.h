@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/parisc/asm/auxvec.h

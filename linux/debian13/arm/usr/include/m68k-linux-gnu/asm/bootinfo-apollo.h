@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/m68k/asm/bootinfo-apollo.h

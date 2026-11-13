@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/sparc/asm/traps.h

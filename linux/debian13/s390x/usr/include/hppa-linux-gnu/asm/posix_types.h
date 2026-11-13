@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/parisc/asm/posix_types.h

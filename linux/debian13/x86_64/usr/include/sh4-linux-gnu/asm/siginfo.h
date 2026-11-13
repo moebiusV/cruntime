@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/sh/asm/siginfo.h

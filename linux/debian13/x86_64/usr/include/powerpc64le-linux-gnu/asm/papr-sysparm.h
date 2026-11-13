@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/powerpc/asm/papr-sysparm.h

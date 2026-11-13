@@ -1,9 +1,0 @@
-triple i686-linux-musl
-os linux/alpine322
-arch i386
-recipe alpine:x86:alpine322
-date 2026-11-12T18:13:19Z
-from musl-1.2.5-r13.apk v3.22/x86 3e13bc32b4a00673c3f44e139a8eb24bf4abf0ebd57a97dc060216906daf9d73
-from musl-dev-1.2.5-r13.apk v3.22/x86 a9307f9b82f42a5a203f743f0f4bf0828257d7565859406160bbfa3d64832cee
-from linux-headers-6.14.2-r0.apk v3.22/x86 1eecc11eee0c2c73796c3acb6cd869041516d46c902b0e3a75b301ffe4be5bfb
-from gcc-14.2.0-r6.apk v3.22/x86 65a672a52500b7fecb27440aa1bc830d49d34614b63b8cabb283169e750a3142

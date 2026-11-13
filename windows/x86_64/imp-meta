@@ -1,8 +1,0 @@
-triple x86_64-w64-mingw32
-os windows
-arch x86_64
-recipe mingw:x86-64
-date 2026-11-12T18:16:35Z
-from mingw-w64-x86-64-dev_12.0.0-5_all.deb sha256 0bf89cf7454cccb49cd2a46a6f7b33896f6ae3a1a2fe33e02c40be6155bbb385
-from mingw-w64-common_12.0.0-5_all.deb sha256 97dce5d0d8aff1cade4786ad4ef5078345477a598829afcac2e7f2fbc5399990
-from gcc-mingw-w64-x86-64-win32_14.2.0-19+27+b1_amd64.deb sha256 a4d7abc5c9c97380eeac348d3b94d522a04e80028bb825cd44df09d9ba90092f

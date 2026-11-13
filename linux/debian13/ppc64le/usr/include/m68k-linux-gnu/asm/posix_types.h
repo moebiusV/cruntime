@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/m68k/asm/posix_types.h

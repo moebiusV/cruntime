@@ -1,6 +1,0 @@
-triple i686-unknown-freebsd
-os freebsd
-arch i386
-recipe freebsd:i386
-date 2026-11-12T18:13:57Z
-from FreeBSD-14.5-RELEASE-i386 base.txz df050ced51cf418072e601b297a24dce9dc872f834d3a64bbacc4b13167d9c66

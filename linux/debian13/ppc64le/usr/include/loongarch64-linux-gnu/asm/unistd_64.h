@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/loongarch/asm/unistd_64.h

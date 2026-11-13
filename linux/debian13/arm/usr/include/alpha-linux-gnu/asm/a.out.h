@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/alpha/asm/a.out.h

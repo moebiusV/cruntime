@@ -10,6 +10,8 @@ machine for each system.
 
 ## Layout
 
+The files are on the `sysroots` branch (this branch, `main`, is this README, the license texts and the site, a few kilobytes: the files are over a gigabyte).  On that branch:
+
     OS/ARCH               windows/x86_64
     OS/RELEASE/ARCH       linux/debian13/aarch64   linux/alpine322/x86_64   openbsd/v80/x86_64   freebsd/v151/x86_64
 
@@ -44,8 +46,8 @@ from and under what license.
 
 ## Using a directory
 
-Take the one directory you need (`git clone --depth 1 --filter=blob:none --no-checkout`, then
-`git sparse-checkout set linux/debian13/aarch64` and `git checkout`, fetches only that one; the whole repository is
+Take the one directory you need (`git clone --depth 1 --branch sysroots --filter=blob:none --no-checkout`, then
+`git sparse-checkout set linux/debian13/aarch64` and `git checkout`, fetches only that one; the whole branch is
 about 1.5 GB), then give it to the compiler as the sysroot:
 
     clang --target=aarch64-linux-gnu --sysroot=cruntime/linux/debian13/aarch64 -fuse-ld=lld -o prog prog.c
@@ -54,7 +56,7 @@ about 1.5 GB), then give it to the compiler as the sysroot:
 A Linux directory also holds libgcc under `usr/lib/gcc/<triple>/<version>`, which clang finds from the sysroot or
 names with `--gcc-install-dir`; a Windows one has the mingw-w64 tree under `usr/<triple>` with crt2.o and
 libmingw32.a.  With IMP72 the driver does all of this: `imp --target=aarch64-linux-gnu prog.imp` fetches the
-directory from here and links.
+directory from the `sysroots` branch and links.
 
 What has been tried: programs of the IMP72 compiler linked with lld against the aarch64 Linux (glibc), x86_64 musl,
 x86_64 mingw-w64, and x86_64 FreeBSD, OpenBSD and NetBSD directories; the aarch64 and mingw-w64 programs were run

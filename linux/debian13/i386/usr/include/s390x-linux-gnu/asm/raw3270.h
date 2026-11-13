@@ -1,1 +1,0 @@
-../../../lib/linux/uapi/s390/asm/raw3270.h

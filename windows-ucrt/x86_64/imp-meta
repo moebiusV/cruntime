@@ -1,0 +1,9 @@
+triple x86_64-w64-mingw32-ucrt
+os windows-ucrt
+arch x86_64
+recipe msys2:ucrt64
+date 2026-11-13T08:45:11Z
+from mingw-w64-ucrt-x86_64-headers-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 b3cec87298555a7c6694bd4d421d586d08a1cb47bc5bc76e79602cbf4421d3c9 license spdx:ZPL-2.1 AND LGPL-2.1-or-later 
+from mingw-w64-ucrt-x86_64-crt-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 e863d0d1c5cef1269738f23dcc155b9b0d161d198b93d9d5aa481cb3a2f2cf53 license spdx:ZPL-2.1 
+from mingw-w64-ucrt-x86_64-winpthreads-14.0.0.r598.ge3d18511f-1-any.pkg.tar.zst sha256 282485a1e453e972b86639cedcf43686e0000dfe5eff0421e47a4405ecdd85ce license spdx:MIT AND BSD-3-Clause 
+from mingw-w64-ucrt-x86_64-gcc-16.2.0-6-any.pkg.tar.zst sha256 0290e91f5a9a8a3699bcea6221a899403bb9bd5d6f7dbd98c883d74e2ef36338 license spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND GFDL-1.3-or-later 
